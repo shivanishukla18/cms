@@ -1,6 +1,5 @@
 import { DeleteFormsModule } from './delete-forms/delete-forms.module';
 import { UpdateFormsModule } from './update-forms/update-forms.module';
-import { CreateFormsModule } from './create-forms/create-forms.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -32,7 +31,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    CreateFormsModule,
     UpdateFormsModule,
     DeleteFormsModule
   ],

@@ -1,4 +1,3 @@
-import { CreateProductComponent } from './create-forms/create-product/create-product.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { ContactComponent } from './contact/contact.component';
@@ -12,7 +11,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
 {path: '', redirectTo: 'home', pathMatch: 'full'},
 {path: 'home' , component: InfoPageComponent},
-{path: 'admin', component: AdminComponent, children: [{path: 'createProduct', component: CreateProductComponent}]},
+{path: 'admin', component: AdminComponent},
 {path: 'ContactUs', component: ContactComponent},
 {path: 'PrivacyPolicy', component: PrivacyPolicyComponent},
 {path: 'dashboard', component: DashboardComponent}
