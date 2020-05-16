@@ -1,0 +1,21 @@
+<div class="wrapper">
+    <form class="form-login form" [formGroup]="loginForm">
+        <h3 class="h3 mb-3 font-weight-normal text-center">ADMIN</h3>
+        <div class="form-group">
+            <label>Username</label>
+            <input type="email" class="form-control" formControlName="username" placeholder="Enter Username">
+            <div *ngIf="loginForm.get('username').errors?.required && loginForm.dirty" [ngStyle]="{'color': 'red'}">Username is required</div>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" formControlName="password" placeholder="Enter Password">
+            <div *ngIf="loginForm.get('password').errors?.required && loginForm.dirty" [ngStyle]="{'color': 'red'}">Password is required</div>
+        </div>
+        <div class="form-group">
+            <label>Passcode</label>
+            <input type="password" class="form-control" formControlName="passcode" placeholder="Enter Passcode">
+            <div *ngIf="loginForm.get('passcode').errors?.required && loginForm.dirty" [ngStyle]="{'color': 'red'}">Passcode is required</div>
+        </div>
+        <button type="submit" [disabled]='!loginForm.valid' class="btn btn-block btn-primary" [routerLink]="['/dashboard']">Login!</button>
+    </form>
+</div>
